@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             xmlns:viewmodels="clr-namespace:ViewModelToViewConverter.ViewModels"
+             x:DataType="viewmodels:ContentViewModel"
+             x:Class="ViewModelToViewConverter.View2">
+    <Grid RowDefinitions="20,*,*" 
+          ColumnDefinitions="*"
+          Margin="20"
+          Padding="10">
+        <Label Text="{Binding WatchMS}"
+               TextColor="Red"/>
+        <telerik:RadTabView x:Name="contactTabView"
+                            Grid.Row="1"
+                            HeaderPosition="Top">
+            <telerik:TabViewItem HeaderText="Details">
+                <ScrollView>
+                    <Grid 
+                          RowSpacing="20"
+                          RowDefinitions="auto,auto,auto,auto,auto">
+                        <telerik:RadExpander x:Name="expandercontact"
+                                             IsExpanded="True"
+                                             Grid.Row="0"
+                                             HeaderText="TabviewOnMac">
+                            <telerik:RadExpander.Content>
+                                <Grid Margin="10"
+                                      ColumnDefinitions="120,*,120,*"
+                                      RowDefinitions="auto,auto,auto,auto,auto,auto,auto"
+                                      ColumnSpacing="10"
+                                      RowSpacing="16">
+                                    <!-- add button -->
+                                    <telerik:RadButton x:Name="addButton"
+                                                           WidthRequest="120"
+                                                           Margin="{OnPlatform Default=0,MacCatalyst='0,0,30,0'}"
+                                                           HorizontalOptions="End"
+                                                           Text="test button"
+                                                           Grid.Column="3" />
+                                </Grid>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                    </Grid>
+                </ScrollView>
+            </telerik:TabViewItem>
+        </telerik:RadTabView>
+
+        <telerik:RadExpander x:Name="expandercontact2" 
+                             Grid.Row="2"
+                             HeaderText="Task of">
+            <telerik:RadExpander.Content>
+                <telerik:RadDataGrid x:Name="taskdg"
+                                    UserEditMode="None"
+                                    UserFilterMode="Disabled"
+                                    UserGroupMode="Disabled"
+                                    SelectionMode="Single"
+                                    ItemsSource="{Binding PersonCollection}"
+                                    AutoGenerateColumns="False">
+                    <telerik:RadDataGrid.Columns>
+                        <telerik:DataGridTextColumn PropertyName="Name"
+                                                    HeaderText="Name">
+                            <telerik:DataGridColumn.CellContentTemplate>
+                                <DataTemplate>
+                                    <telerik:RadHighlightLabel UnformattedText="{Binding Name}"
+                                                               TextDecorations="Underline">
+                                    </telerik:RadHighlightLabel>
+                                </DataTemplate>
+                            </telerik:DataGridColumn.CellContentTemplate>
+                        </telerik:DataGridTextColumn>
+
+                        <telerik:DataGridTextColumn PropertyName="Age"
+                                                    HeaderText="Age">
+                            <telerik:DataGridColumn.CellContentTemplate>
+                                <DataTemplate>
+                                    <telerik:RadHighlightLabel UnformattedText="{Binding Age}"
+                                                               TextDecorations="Underline">
+                                    </telerik:RadHighlightLabel>
+                                </DataTemplate>
+                            </telerik:DataGridColumn.CellContentTemplate>
+                        </telerik:DataGridTextColumn>
+
+                        <telerik:DataGridTextColumn PropertyName="Department"
+                                                    HeaderText="Department">
+                            <telerik:DataGridColumn.CellContentTemplate>
+                                <DataTemplate>
+                                    <telerik:RadHighlightLabel UnformattedText="{Binding Department}"
+                                                               TextDecorations="Underline">
+                                    </telerik:RadHighlightLabel>
+                                </DataTemplate>
+                            </telerik:DataGridColumn.CellContentTemplate>
+                        </telerik:DataGridTextColumn>
+
+                    </telerik:RadDataGrid.Columns>
+                </telerik:RadDataGrid>
+            </telerik:RadExpander.Content>
+        </telerik:RadExpander>
+    </Grid>
+</ContentView>
