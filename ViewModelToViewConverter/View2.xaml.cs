@@ -11,10 +11,10 @@ public partial class View2 : ContentView
         // Starting the Stopwatch
         var watch = Stopwatch.StartNew();
         InitializeComponent();
-        // Stop the Stopwatch
-        watch.Stop();
         _viewModel = new ContentViewModel();
         BindingContext = _viewModel;
+        // Stop the Stopwatch
+        watch.Stop();
         _viewModel.WatchMS = watch.ElapsedMilliseconds;
     }
 }
