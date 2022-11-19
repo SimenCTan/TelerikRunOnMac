@@ -7,16 +7,13 @@
              x:DataType="local:MainPage"
              Title="View1">
 			 
-    <ScrollView>
-        <VerticalStackLayout 
-            Spacing="25" 
-            Padding="30,0">
+        <Grid RowDefinitions="50,*"
+              RowSpacing="10">
 
-            <Button Text="Change to view 2" Clicked="Button_Clicked"/>
+            <Button Text="Change view" Clicked="Button_Clicked"/>
 
-            <ContentView Content="{Binding Title , Converter={x:Static converters:TheConverter.Instance}}"/>
+            <ContentView Grid.Row="1" Content="{Binding Title , Converter={x:Static converters:TheConverter.Instance}}"/>
 
-        </VerticalStackLayout>
-    </ScrollView>
+        </Grid>
  
 </ContentPage>
