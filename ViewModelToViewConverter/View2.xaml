@@ -21,6 +21,7 @@
                     <ActivityIndicator Style="{StaticResource Key=LoadingDataStyle}"
                                    Grid.Row="1"/>
                     <telerik:RadDataGrid Grid.Row="2"
+                                         SelectionStyle="{StaticResource DgRowSelectedStyle}"
                                     UserEditMode="None"
                                     UserFilterMode="Disabled"
                                     UserGroupMode="Disabled"

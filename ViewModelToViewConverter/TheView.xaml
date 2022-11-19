@@ -21,6 +21,7 @@
                     <ActivityIndicator Style="{StaticResource Key=LoadingDataStyle}"
                                    Grid.Row="1"/>
                     <telerik:RadDataGrid Grid.Row="2"
+                                         SelectionStyle="{StaticResource DgRowSelectedStyle}"
                                     UserEditMode="None"
                                     UserFilterMode="Disabled"
                                     UserGroupMode="Disabled"
@@ -174,6 +175,7 @@
                                          HeaderText="Test People2">
                         <telerik:RadExpander.Content>
                             <telerik:RadDataGrid 
+                                SelectionStyle="{StaticResource DgRowSelectedStyle}"
                                          Grid.Row="2"
                                     UserEditMode="None"
                                     UserFilterMode="Disabled"
@@ -225,6 +227,7 @@
                                          HeaderText="Test People3">
                         <telerik:RadExpander.Content>
                             <telerik:RadDataGrid 
+                                SelectionStyle="{StaticResource DgRowSelectedStyle}"
                                          Grid.Row="2"
                                     UserEditMode="None"
                                     UserFilterMode="Disabled"
@@ -276,6 +279,7 @@
                                          HeaderText="Test People4">
                         <telerik:RadExpander.Content>
                             <telerik:RadDataGrid 
+                                SelectionStyle="{StaticResource DgRowSelectedStyle}"
                                     UserEditMode="None"
                                     UserFilterMode="Disabled"
                                     UserGroupMode="Disabled"
@@ -326,6 +330,7 @@
                                          HeaderText="Test People5">
                         <telerik:RadExpander.Content>
                             <telerik:RadDataGrid 
+                                SelectionStyle="{StaticResource DgRowSelectedStyle}"
                                     UserEditMode="None"
                                     UserFilterMode="Disabled"
                                     UserGroupMode="Disabled"

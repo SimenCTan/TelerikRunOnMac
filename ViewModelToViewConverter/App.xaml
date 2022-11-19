@@ -27,6 +27,10 @@
                 <Setter Property="WidthRequest" Value="280"/>
                 <Setter Property="HeightRequest" Value="36"/>
             </Style>
+            <telerik:DataGridBorderStyle x:Key="DgRowSelectedStyle"
+                                         BackgroundColor="{StaticResource Gray100}"
+                                         BorderColor="{StaticResource Primary}"
+                                         BorderThickness="3"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
