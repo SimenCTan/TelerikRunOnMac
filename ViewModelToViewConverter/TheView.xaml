@@ -5,7 +5,7 @@
              xmlns:viewmodels="clr-namespace:ViewModelToViewConverter.ViewModels"
              x:DataType="viewmodels:ContentViewModel"
              x:Class="ViewModelToViewConverter.TheView">
-    <Grid RowDefinitions="20,*,*" 
+    <Grid RowDefinitions="auto,*" 
           ColumnDefinitions="*"
           RowSpacing="10"
           Margin="10">
@@ -71,7 +71,6 @@
                           RowSpacing="20"
                           RowDefinitions="auto,auto,auto,auto,auto">
                     <telerik:RadExpander x:Name="expandercontact"
-                                             IsExpanded="True"
                                              Grid.Row="0"
                                              HeaderText="TabviewOnMac">
                         <telerik:RadExpander.Content>
