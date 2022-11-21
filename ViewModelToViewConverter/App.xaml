@@ -31,6 +31,10 @@
                                          BackgroundColor="{StaticResource Gray100}"
                                          BorderColor="{StaticResource Primary}"
                                          BorderThickness="3"/>
+            <telerik:DataGridBorderStyle x:Key="DgCurrentCellStyle"
+                                         BackgroundColor="{StaticResource Yellow100Accent}"
+                                         BorderColor="{StaticResource Black}"
+                                         BorderThickness="3"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -22,6 +22,7 @@
                                    Grid.Row="1"/>
                     <telerik:RadDataGrid Grid.Row="2"
                                          SelectionStyle="{StaticResource DgRowSelectedStyle}"
+                                         CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
                                     UserEditMode="None"
                                     UserFilterMode="Disabled"
                                     UserGroupMode="Disabled"
