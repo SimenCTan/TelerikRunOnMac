@@ -17,7 +17,7 @@
                 <Setter Property="FocusedBorderBrush" Value="{StaticResource PrimaryBrush}"/>
                 <Setter Property="FocusedBorderThickness" Value="2"/>
                 <Setter Property="Keyboard" Value="Plain"/>
-                <Setter Property="Background" Value="{StaticResource WhiteBrush}"/>
+                <Setter Property="Background" Value="{StaticResource Gray100}"/>
                 <Setter Property="FontFamily" Value="OpenSansRegular"/>
             </Style>
             <Style TargetType="telerik:RadEntry" x:Key="SearchEntryStyle">

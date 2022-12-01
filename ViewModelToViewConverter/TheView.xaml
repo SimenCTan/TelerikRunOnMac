@@ -94,12 +94,15 @@
                                                           Grid.Row="1"
                                                   Grid.Column="1"
                                                   MaxLength="50"/>
-                                <Label Text="Revenue:" 
-                                               Grid.Row="1"
-                                                Grid.Column="2"/>
-                                <telerik:RadNumericMaskedEntry Mask="C"
-                                                                       Grid.Row="1"
-                                                                       Grid.Column="3"/>
+
+                                <Label Text="combo:" 
+                                       Grid.Row="1"
+                                       Grid.Column="2"/>
+                                <telerik:RadComboBox ItemsSource="{Binding PersonCollection}"
+                                             DisplayMemberPath="Name"
+                                             Placeholder="select..."
+                                             Grid.Row="1"
+                                             Grid.Column="3"/>
 
                                 <!--Second row-->
                                 <Label Text="Employees:" 
