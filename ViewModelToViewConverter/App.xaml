@@ -35,6 +35,17 @@
                                          BackgroundColor="{StaticResource Yellow100Accent}"
                                          BorderColor="{StaticResource Black}"
                                          BorderThickness="3"/>
+
+            <Style x:Key="ChartBorderStyle" TargetType="telerik:RadBorder">
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="BorderBrush" Value="{StaticResource TertiaryBrush}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Shadow">
+                    <Shadow Brush="{StaticResource WhiteBrush}"
+                            Offset="5,5"
+                            Opacity="0.1"/>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
