@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ViewModelToViewConverter.ViewModels"
+             xmlns:converters="clr-namespace:ViewModelToViewConverter"
+             x:DataType="local:ParentViewModel"
+             x:Class="ViewModelToViewConverter.ParentContentView2">
+    <Grid RowDefinitions="*">
+        <ContentView Content="{Binding PageTitle,Converter={x:Static converters:TheConverter.Instance}}"/>
+    </Grid>
+</ContentView>

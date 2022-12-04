@@ -11,13 +11,13 @@ public partial class MainPage : ContentPage
 
 	private void Button_Clicked(object sender, EventArgs e)
 	{
-        if (Title == "View2")
+        if (Title == "ParentView2")
         {
-            Title = "View1";
+            Title = "ParentView1";
         }
         else
         {
-            Title = "View2";
+            Title = "ParentView2";
         }
 	}
 }

@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:ViewModelToViewConverter"
              x:Class="ViewModelToViewConverter.MainPage"
              x:DataType="local:MainPage"
-             Title="View1">
+             Title="ParentView1">
 			 
         <Grid RowDefinitions="50,*"
               RowSpacing="10">

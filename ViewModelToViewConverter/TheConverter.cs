@@ -10,10 +10,22 @@ public class TheConverter : IValueConverter
     {
         string title = (string)value;
 
-        if (title == "View1")
+        if (title == "ParentView1")
+        {
+            return new ParentContentView(title);
+        }
+        else if (title == "ParentView2")
+        {
+            return new ParentContentView2(title);
+        }
+        else if (title == "View1")
             return new TheView();
-        else
+        else if (title == "View2")
             return new View2();
+        else 
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
